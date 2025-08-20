@@ -1,0 +1,174 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.landscape {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #87CEEB; /* sky blue */
+    overflow: hidden;
+}
+
+/* Sky */
+.sky {
+    background: linear-gradient(to top, #87CEEB, #B0E0E6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Sun */
+.sun {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 80px;
+    height: 80px;
+    background: yellow;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* Sun Rays */
+.sun-ray {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background: yellow;
+    top: 25px;
+    left: 35px;
+    transform-origin: center bottom;
+    z-index: 1;
+}
+.ray-1 { transform: rotate(0deg) translateY(-50px); }
+.ray-2 { transform: rotate(45deg) translateY(-50px); }
+.ray-3 { transform: rotate(90deg) translateY(-50px); }
+.ray-4 { transform: rotate(135deg) translateY(-50px); }
+.ray-5 { transform: rotate(180deg) translateY(-50px); }
+.ray-6 { transform: rotate(225deg) translateY(-50px); }
+.ray-7 { transform: rotate(270deg) translateY(-50px); }
+.ray-8 { transform: rotate(315deg) translateY(-50px); }
+
+/* Mountains */
+.mountain {
+    position: absolute;
+    bottom: 200px;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    z-index: 1;
+}
+.mountain-left {
+    left: 100px;
+    border-bottom: 200px solid #2E8B57; /* green */
+}
+.mountain-right {
+    right: 100px;
+    border-bottom: 200px solid #3CB371;
+}
+
+/* Hills */
+.hill {
+    position: absolute;
+    bottom: 150px;
+    width: 200px;
+    height: 100px;
+    background: #228B22;
+    border-radius: 100px;
+    z-index: 2;
+}
+.hill-back {
+    left: 50%;
+    transform: translateX(-60%);
+    opacity: 0.5;
+}
+.hill-front {
+    left: 50%;
+    transform: translateX(-40%);
+    background: #006400;
+}
+
+/* House */
+.house {
+    position: absolute;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+.house-base {
+    width: 100px;
+    height: 70px;
+    background: #FFD700;
+}
+.house-roof {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 40px solid #8B0000;
+    margin-top: -40px;
+}
+.house-door {
+    width: 20px;
+    height: 30px;
+    background: brown;
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+}
+.house-window {
+    width: 20px;
+    height: 20px;
+    background: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Water */
+.water {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background: #00BFFF;
+    z-index: 0;
+}
+
+/* Reflections */
+.reflection-mountain {
+    position: absolute;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    opacity: 0.2;
+}
+.reflection-mountain-left {
+    left: 100px;
+    border-top: 200px solid #2E8B57;
+}
+.reflection-mountain-right {
+    right: 100px;
+    border-top: 200px solid #3CB371;
+}
+
+.reflection-house {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 70px;
+    background: #FFD700;
+    opacity: 0.2;
+}
